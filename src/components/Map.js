@@ -1,10 +1,8 @@
 import React from "react";
 import {
   GoogleMap,
-  useJsApiLoader,
   DistanceMatrixService,
   Marker,
-  Autocomplete,
 } from "@react-google-maps/api";
 
 const containerStyle = {

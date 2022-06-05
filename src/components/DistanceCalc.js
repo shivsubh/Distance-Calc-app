@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 
 import Map from "./Map";
 import "./DistanceCalc.css";
@@ -15,9 +15,6 @@ const DistanceCalc = () => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
   };
-
-  const [distance, setDistance] = useState("");
-  const [route, setRoute] = useState("");
 
   const originRef = useRef();
 
@@ -83,7 +80,7 @@ const DistanceCalc = () => {
                 </div>
               </div>
             </form>
-            <div className="distance-show">{`Distance             ${distance}`}</div>
+            <div className="distance-show">Distance</div>
           </div>
           <div className="show-map">
             <Map />
