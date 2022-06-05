@@ -8,7 +8,7 @@ import { Autocomplete, useJsApiLoader } from "@react-google-maps/api";
 const DistanceCalc = () => {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
-    googleMapsApiKey: "YOUR_API_KEY_HERE",
+    googleMapsApiKey: "AIzaSyCyHODJXp7jhgkpZeqnPDdxSsz7GSyrNy4",
     libraries: ["places"],
   });
 
