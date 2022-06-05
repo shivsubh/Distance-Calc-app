@@ -15,8 +15,13 @@ const containerStyle = {
 };
 
 const center = {
-  lat: 1.296788,
-  lng: 103.778961,
+  lat: 28.6448,
+  lng: 77.216721,
+};
+
+const dest = {
+  lat: 19.07609,
+  lng: 72.877426,
 };
 
 function Map() {
@@ -36,7 +41,7 @@ function Map() {
     <GoogleMap
       mapContainerStyle={containerStyle}
       center={center}
-      zoom={10}
+      zoom={5}
       onLoad={onLoad}
       onUnmount={onUnmount}
     >
@@ -51,6 +56,7 @@ function Map() {
         }}
       />
       <Marker position={center} />
+      <Marker position={dest} />
       {/* Child components, such as markers, info windows, etc. */}
       <></>
     </GoogleMap>
