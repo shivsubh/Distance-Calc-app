@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   GoogleMap,
   DistanceMatrixService,
@@ -23,7 +23,12 @@ const dest = {
 };
 
 function Map() {
-  const [map, setMap] = React.useState(null);
+  const [map, setMap] = useState(null);
+  const [zoom, setZoom] = useState(0);
+
+  setTimeout(() => {
+    setZoom(5);
+  }, 1000);
 
   const onLoad = React.useCallback(function callback(map) {
     const bounds = new window.google.maps.LatLngBounds(center);
@@ -38,25 +43,23 @@ function Map() {
   return (
     <GoogleMap
       mapContainerStyle={containerStyle}
+      zoom={zoom}
       center={center}
-      zoom={5}
       onLoad={onLoad}
       onUnmount={onUnmount}
     >
+      <Marker position={center} />
+      <Marker position={dest} />
       <DistanceMatrixService
         options={{
-          destinations: [{ lat: 1.296788, lng: 103.778961 }],
-          origins: [{ lng: 103.780267, lat: 1.291692 }],
+          destinations: [dest],
+          origins: [center],
           travelMode: "DRIVING",
         }}
         callback={(response) => {
           console.log(response);
         }}
       />
-      <Marker position={center} />
-      <Marker position={dest} />
-      {/* Child components, such as markers, info windows, etc. */}
-      <></>
     </GoogleMap>
   );
 }
