@@ -1,0 +1,130 @@
+body{
+ background: rgba(244, 248, 250, 1);
+}
+
+h1{
+    text-align: center;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    color: #1B31A8;
+    margin: 1rem;
+}
+
+.container {
+    display: flex;
+    padding: 8rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    justify-content: space-between;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.origin-label {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    
+}
+
+.destination-label {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    
+}
+
+input:focus{
+    outline: none;
+}
+
+input{
+    width: 14rem;
+    height: 1.2rem;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 120%;
+    color: #4D6475;
+}
+
+.origin-input {
+    height: 2.2rem;
+    border: none;
+    outline: none;
+}
+
+
+.input-container{
+    position: relative;
+    display: flex;
+    padding: 1rem;
+    padding-left: 0;
+}
+
+.input-container > img {
+    background-color: white;
+    size: 1rem;
+}
+
+.destination-input {
+    height: 2.2rem;
+    border: none;
+}
+
+.btn-container {
+    padding: 4rem;
+}
+
+.button-form {
+width: 141px;
+height: 62px;
+background: #1B31A8;
+border-radius: 32px;
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 20px;
+text-align: center;
+color: #FFFFFF;
+opacity: 1;
+transition: 0.3s;
+border: none;
+}
+
+.button-form:hover {
+    filter: brightness(50%);
+}
+
+.button-form:active {
+    box-shadow: 0 2px;
+    transform: translateY(2px);
+}
+
+.distance-show {
+    background-color: #FFFFFF;
+    background-size: contain;
+    width: 27rem;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    color: #1E2A32;
+}
+
+.show-map {
+    display: flex;
+}
